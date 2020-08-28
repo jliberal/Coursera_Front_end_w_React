@@ -101,12 +101,6 @@ class Main extends Component {
 							<Route path="/home" component={HomePage} />
 							<Route
 								exact
-								path="/aboutus"
-								component={() => <About leaders={this.props.leaders} />}
-							/>
-							} /{'>'}
-							<Route
-								exact
 								path="/menu"
 								component={() => <Menu dishes={this.props.dishes} />}
 							/>
@@ -117,6 +111,11 @@ class Main extends Component {
 								component={() => (
 									<Contact resetFeedbackForm={this.props.resetFeedbackForm} />
 								)}
+							/>
+							<Route
+								exact
+								path="/aboutus"
+								component={() => <About leaders={this.props.leaders} />}
 							/>
 							<Redirect to="/home" />
 						</Switch>
